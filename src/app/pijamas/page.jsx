@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <div className="ventas">
+    <div class="ventas grid grid-cols-4 justify-center ml-100px mt-200px">
       {list.map((item, index) => (
         <div className="product" key={index}>
           <div className="images">

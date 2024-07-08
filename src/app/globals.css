@@ -1,59 +1,42 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body{
     margin: auto;   
 }
 
-nav{
-    display: flex;
-    justify-content: space-between; /* Distribuye los elementos a lo largo del eje principal (horizontalmente) */
-    align-items: center; /* Centra verticalmente los elementos */
-    background-color: #f5dcc6;
-    width: 100%;
-    color: #295662;
-}
-.logo{
-    padding-left: 50px;
-   
-}
-.navegacion{
-    width: 650px;
-    justify-content: center;
-    margin-right: 300px;
-}
-.opciones {
-    display: flex;
-    list-style: none;
-    margin: 0; /* Elimina el margen predeterminado de la lista */
-    text-decoration: none;
-    justify-content: center;
-    
-}
 .opciones a {
     text-decoration: none;
     color:#295662;
 }
 
 .opciones li {
-     /* Muestra los elementos de la lista en línea */
-    margin-left: 90px; /* Añade un espacio entre las opciones */
+    
+    margin-left: 90px; 
     margin-right: 90px;
 }
+
 .opciones link:visited{
     text-decoration: none;
     color: #000;
     
 }
+
 .logo link:visited{
     text-decoration: none;
     color: #000;
     
 }
+
 .logo a {
     text-decoration: none;
     color:antiquewhite;
 }
 
 .product{
-    
+
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -138,6 +121,7 @@ product-name {
     font-weight: 400;
     color: rgb(97,97,97);
     margin-bottom: 10px;
+    margin-top: 10px;
     transition: all 1s;
     opacity: 1;
 }
@@ -146,6 +130,7 @@ product-name {
     opacity: 0;
 }
 .price{
+    margin-top: 10px;
     color: rgb(34, 34, 34);
 }
 .detail span,
@@ -153,15 +138,6 @@ product-name {
 .detail p.category,
 .detail p.price {
     line-height: 0.6; /* Reducir el interlineado a 1 (o cualquier valor que prefieras) */
-}
-.ventas{
-    display: flex;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    margin-left: 100px;
-    margin-top: 200px;
-    
 }
 
 .carousel-container {
@@ -180,3 +156,9 @@ product-name {
     height: 150px;
     margin-left: 100px;
   }
+
+@media (max-width: 800px) {
+    #central {
+       flex-direction: column;
+    }
+}

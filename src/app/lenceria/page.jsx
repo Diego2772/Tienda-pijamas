@@ -4,12 +4,11 @@ import "../globals.css";
 import { useState } from "react";
 import list from "../../../public/lenceria";
 
+{/* <div class="ventas grid grid-cols-4 justify-center ml-100px mt-200px"> */};
+
 function Lenceria() {
-  
-  // Estado inicial: un objeto que contiene el estado para cada producto
   const [productMedia, setProductMedia] = useState({});
 
-  // Función para cambiar la imagen principal de un producto al pasar el cursor sobre las miniaturas
   const handleMediaChange = (productId, image) => {
     setProductMedia({ ...productMedia, [productId]: image });
   };
@@ -19,16 +18,15 @@ function Lenceria() {
   };
 
   return (
-    <div className="ventas">
+    <div className="flex items-center justify-center h-full">
+     <div className="ventas grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-10 justify-center lg:ml-10 md:ml-0 lg:mt-20">
       {list.map((item, index) => (
         <div className="product" key={index}>
           <div className="images">
             <div className="preview">
-              {/* Imagen principal: utiliza el estado correspondiente al producto actual */}
               <img src={productMedia[index] || item.img} alt="" />
             </div>
             <div className="hover-images">
-              {/* Miniaturas */}
               {Object.values(item.productMedia).map((image, idx) => (
                 <img
                   key={idx}
@@ -40,7 +38,6 @@ function Lenceria() {
               ))}
             </div>
           </div>
-          {/* Detalles del producto */}
           <div className="detail">
             <span>{item.tipo}</span>
             <h4 className="product-name">{item.title}</h4>
@@ -51,6 +48,7 @@ function Lenceria() {
         </div>
       ))}
     </div>
+  </div>
   );
 }
 
