@@ -1,0 +1,182 @@
+body{
+    margin: auto;   
+}
+
+nav{
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos a lo largo del eje principal (horizontalmente) */
+    align-items: center; /* Centra verticalmente los elementos */
+    background-color: #f5dcc6;
+    width: 100%;
+    color: #295662;
+}
+.logo{
+    padding-left: 50px;
+   
+}
+.navegacion{
+    width: 650px;
+    justify-content: center;
+    margin-right: 300px;
+}
+.opciones {
+    display: flex;
+    list-style: none;
+    margin: 0; /* Elimina el margen predeterminado de la lista */
+    text-decoration: none;
+    justify-content: center;
+    
+}
+.opciones a {
+    text-decoration: none;
+    color:#295662;
+}
+
+.opciones li {
+     /* Muestra los elementos de la lista en línea */
+    margin-left: 90px; /* Añade un espacio entre las opciones */
+    margin-right: 90px;
+}
+.opciones link:visited{
+    text-decoration: none;
+    color: #000;
+    
+}
+.logo link:visited{
+    text-decoration: none;
+    color: #000;
+    
+}
+.logo a {
+    text-decoration: none;
+    color:antiquewhite;
+}
+
+.product{
+    
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    height:380px;
+    width: 220px;
+    border-radius: 15px;
+    padding: 12px;
+    transition:  all 0.5s ;
+    margin: 20px;
+}
+.preview:hover{
+    background-color: rgb(241,241,241);
+    flex-direction: column;
+}
+.image{
+    display: flex;
+
+
+}
+.preview{
+    height: 270px;
+    width: 100%;
+
+}
+.preview img{
+    height: 100%;
+    width: 100%; 
+    border-radius: 15px;
+    box-shadow: rgba(0,0,0,0.1) 0px 10px 40px 0px;
+    object-fit: cover;
+}
+
+.hover-images{
+    width:  100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    margin-top: 7px;
+    scale: 0;
+    opacity: 0;
+    transform-origin: top-left;
+    transition: scale 0.5s,opacity 0.5s;
+}
+.product:hover .hover-images{
+   scale: 1;
+   opacity: 1;
+}
+.hover-images img{
+    width: 30px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: all 0.5s;
+
+}
+.hover-images img:hover{
+    border: 1px solid rgb(44,44,44);
+    scale: 1.1;
+}
+.detail{
+    transform: translateY(-30px);
+    transition: all 0.5s; 
+    
+}
+.product:hover .detail {
+    transform: translateY(0px);
+}
+span {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+product-name {
+    font-weight: 500;
+    transition: all 0.5s;
+
+}
+.category{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(97,97,97);
+    margin-bottom: 10px;
+    transition: all 1s;
+    opacity: 1;
+}
+.product:hover .category{
+    display: none;
+    opacity: 0;
+}
+.price{
+    color: rgb(34, 34, 34);
+}
+.detail span,
+.detail h4.product-name,
+.detail p.category,
+.detail p.price {
+    line-height: 0.6; /* Reducir el interlineado a 1 (o cualquier valor que prefieras) */
+}
+.ventas{
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin-left: 100px;
+    margin-top: 200px;
+    
+}
+
+.carousel-container {
+    max-width: 1530px;
+    max-height: 500px;
+    margin: 0 auto; /* Centra el carrusel horizontalmente */
+  }
+.carousel-container .carousel .slide img {
+    width: 1530px;
+    height: 500px;
+    object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsión */
+  }
+  
+  .logo img {
+    width: 150px;
+    height: 150px;
+    margin-left: 100px;
+  }
