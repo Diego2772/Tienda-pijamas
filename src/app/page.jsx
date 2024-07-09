@@ -1,13 +1,13 @@
 
 import React from 'react';
 import Carrucel from './carrucel/carrucel'; 
-import Lenceria from './lenceria/page';
+import Pag_principal from './pag_principal/page';
 const Page = () => {
   return (
     <div>
      
       <Carrucel />
-      <Lenceria />
+      <Pag_principal />
     </div>
   );
 };
