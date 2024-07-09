@@ -1,5 +1,6 @@
 const list = [
     {
+      id: 0,
       title: "Lenceria",
       img: "/images/lenceria1.jpg",
       cantidad: "3 modelos",
@@ -11,8 +12,10 @@ const list = [
         modelo2: "/images/lenceria2.webp",
         modelo3: "/images/lenceria3.jpg",
       },
+      descripcion: "Esta es una descripcion",
     },
-    {
+    {   
+        id: 1,
         title: "Lenceria",
         img: "/images/lenceria1.jpg",
         cantidad: "3 modelos",
@@ -24,7 +27,9 @@ const list = [
           modelo2: "/images/lenceria2.webp",
           modelo3: "/images/lenceria3.jpg",
         },
+        descripcion: "Esta es una descripcion",
       }, {
+        id: 2,
         title: "Lenceria",
         img: "/images/lenceria1.jpg",
         cantidad: "3 modelos",
@@ -36,7 +41,9 @@ const list = [
           modelo2: "/images/lenceria2.webp",
           modelo3: "/images/lenceria3.jpg",
         },
+        descripcion: "Esta es una descripcion",
       }, {
+        id: 3,
         title: "Lenceria",
         img: "/images/lenceria1.jpg",
         cantidad: "3 modelos",
@@ -48,7 +55,9 @@ const list = [
           modelo2: "/images/lenceria2.webp",
           modelo3: "/images/lenceria3.jpg",
         },
+        descripcion: "Esta es una descripcion",
       }, {
+        id: 4,
         title: "Lenceria",
         img: "/images/lenceria1.jpg",
         cantidad: "3 modelos",
@@ -60,7 +69,9 @@ const list = [
           modelo2: "/images/lenceria2.webp",
           modelo3: "/images/lenceria3.jpg",
         },
+        descripcion: "Esta es una descripcion",
       }, {
+        id: 5,
         title: "Lenceria",
         img: "/images/lenceria1.jpg",
         cantidad: "3 modelos",
@@ -72,7 +83,9 @@ const list = [
           modelo2: "/images/lenceria2.webp",
           modelo3: "/images/lenceria3.jpg",
         },
+        descripcion: "Esta es una descripcion",
       }, {
+        id: 6,
         title: "Lenceria",
         img: "/images/lenceria1.jpg",
         cantidad: "3 modelos",
@@ -84,7 +97,9 @@ const list = [
           modelo2: "/images/lenceria2.webp",
           modelo3: "/images/lenceria3.jpg",
         },
+        descripcion: "Esta es una descripcion",
       }, {
+        id: 7,
         title: "Lenceria",
         img: "/images/lenceria1.jpg",
         cantidad: "3 modelos",
@@ -96,7 +111,9 @@ const list = [
           modelo2: "/images/lenceria2.webp",
           modelo3: "/images/lenceria3.jpg",
         },
+        descripcion: "Esta es una descripcion",
       }, {
+        id: 8,
         title: "Lenceria",
         img: "/images/lenceria1.jpg",
         cantidad: "3 modelos",
@@ -108,7 +125,9 @@ const list = [
           modelo2: "/images/lenceria2.webp",
           modelo3: "/images/lenceria3.jpg",
         },
+        descripcion: "Esta es una descripcion",
       }, {
+        id: 9,
         title: "Lenceria",
         img: "/images/lenceria1.jpg",
         cantidad: "3 modelos",
@@ -120,7 +139,9 @@ const list = [
           modelo2: "/images/lenceria2.webp",
           modelo3: "/images/lenceria3.jpg",
         },
+        descripcion: "Esta es una descripcion",
       }, {
+        id: 10,
         title: "Lenceria",
         img: "/images/lenceria1.jpg",
         cantidad: "3 modelos",
@@ -132,7 +153,9 @@ const list = [
           modelo2: "/images/lenceria2.webp",
           modelo3: "/images/lenceria3.jpg",
         },
+        descripcion: "Esta es una descripcion",
       }, {
+        id: 11,
         title: "Lenceria",
         img: "/images/lenceria1.jpg",
         cantidad: "3 modelos",
@@ -144,6 +167,7 @@ const list = [
           modelo2: "/images/lenceria2.webp",
           modelo3: "/images/lenceria3.jpg",
         },
+        descripcion: "Esta es una descripcion",
       }
   ];
 

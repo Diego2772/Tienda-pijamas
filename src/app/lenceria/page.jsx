@@ -1,15 +1,11 @@
-"use client";
-import React from "react";
-import "../globals.css";
-import { useState } from "react";
+"use client"
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import list from "../../../public/lenceria";
-
-{
-  /* <div class="ventas grid grid-cols-4 justify-center ml-100px mt-200px"> */
-}
 
 function Lenceria() {
   const [productMedia, setProductMedia] = useState({});
+  const router = useRouter();
 
   const handleMediaChange = (productId, image) => {
     setProductMedia({ ...productMedia, [productId]: image });
@@ -19,15 +15,19 @@ function Lenceria() {
     setProductMedia({ ...productMedia, [productId]: null });
   };
 
+  const handleProductClick = (productId) => {
+    router.push(`/lenceriaVentas/${productId}`);
+  };
+
   return (
-    <div className=" items-center justify-center h-full mt-10">
+    <div className="items-center justify-center h-full mt-10">
       <div className="flex items-center justify-center w-screen">
         <h1 className="text-center">CONOCE NUESTRAS NUEVA LENCERIA </h1>
       </div>
       <div className="flex justify-center">
         <div className="ventas grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-10 lg:ml-10 md:ml-0 lg:mt-20">
           {list.map((item, index) => (
-            <div className="product" key={index}>
+            <div className="product" key={index} onClick={() => handleProductClick(index)}>
               <div className="images">
                 <div className="preview">
                   <img src={productMedia[index] || item.img} alt="" />
@@ -54,7 +54,7 @@ function Lenceria() {
             </div>
           ))}
         </div>
-        </div>
+      </div>
     </div>
   );
 }

@@ -1,20 +1,22 @@
 "use client";
-import React from "react";
-import "../globals.css";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import list from "../../../public/data";
 
 function App() {
-  // Estado inicial: un objeto que contiene el estado para cada producto
   const [productMedia, setProductMedia] = useState({});
+  const router = useRouter();
 
-  // Función para cambiar la imagen principal de un producto al pasar el cursor sobre las miniaturas
   const handleMediaChange = (productId, image) => {
     setProductMedia({ ...productMedia, [productId]: image });
   };
 
   const handleMouseLeave = (productId) => {
     setProductMedia({ ...productMedia, [productId]: null });
+  };
+
+  const handleProductClick = (productId) => {
+    router.push(`/PijamasVentas/${productId}`);
   };
 
   return (
@@ -25,7 +27,7 @@ function App() {
       <div className="flex justify-center">
         <div className="ventas grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-10 lg:ml-10 md:ml-0 lg:mt-20">
           {list.map((item, index) => (
-            <div className="product" key={index}>
+            <div className="product" key={index} onClick={() => handleProductClick(index)}>
               <div className="images">
                 <div className="preview">
                   {/* Imagen principal: utiliza el estado correspondiente al producto actual */}
