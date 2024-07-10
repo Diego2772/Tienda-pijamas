@@ -35,8 +35,8 @@ const ProductPage = ({ params }) => {
   };
 
   return (
-    <div className="mt-5 mb-20 grid grid-cols-1 md:grid-cols-3 gap-3">
-      <div className="col-span-1 md:col-span-2 mx-auto md:mx-0" style={{ width: '100%', height: '500px', maxWidth: '500px' }}>
+    <div className="mt-5 mb-20 grid grid-cols-1 lg:grid-cols-3 gap-3">
+      <div className="col-span-1 md:col-span-2 mx-auto md:mb-[100px] lg:ml-[280px]" style={{ width: '100%', height: '500px', maxWidth: '500px' }}>
         <Carousel 
           showArrows={true}
           onChange={onChange}
@@ -65,7 +65,7 @@ const ProductPage = ({ params }) => {
         </Carousel>
       </div>
       {/* detalles */}
-      <div className="col-span-1 px-5 mt-8 md:mt-0">
+      <div className="col-span-1 px-5 mt-8 md:mt-0 " >
         <h1 className="antialiased font-bold text-xl">{product.title}</h1>
         <p className="text-lg mb-5">${product.price}</p>
         <p>Tallas disponibles:</p>
