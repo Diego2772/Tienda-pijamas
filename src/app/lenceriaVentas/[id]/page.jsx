@@ -1,24 +1,22 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import list from "../../../../public/lenceria";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-// Función para obtener un producto por su ID
 function getProduct(id) {
   const productId = Number(id); // Asegúrate de convertir el ID a número si es necesario
   return list.find((item) => item.id === productId);
 }
 
-// Componente de la página del producto
 const ProductPage = ({ params }) => {
   const product = getProduct(params.id);
 
-  // Estado para almacenar la URL de WhatsApp
   const [whatsappLink, setWhatsappLink] = useState("");
 
-  // Efecto para generar dinámicamente el enlace de WhatsApp
   useEffect(() => {
     if (product) {
       const productLink = window.location.href;
@@ -28,12 +26,10 @@ const ProductPage = ({ params }) => {
     }
   }, [product]);
 
-  // Verifica si el producto no se encontró
   if (!product) {
     return <div>Producto no encontrado</div>;
   }
 
-  // Funciones para eventos del carrusel (opcionales)
   const onChange = (index, item) => {
     console.log(`Changed to ${index}`, item);
   };
@@ -82,9 +78,12 @@ const ProductPage = ({ params }) => {
         <p className="text-lg mb-5">${product.price}</p>
         <p>Tallas disponibles:</p>
         <p>S, M, L</p>
-        <button className="btn-primary my-5">
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">Ir a Whatsapp</a>
-        </button>
+        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+          <button className="flex items-center justify-center bg-green-500 text-white rounded-full py-2 px-4 hover:bg-green-600 transition-colors duration-300 mt-3 mb-3">
+            <FontAwesomeIcon icon={faWhatsapp} className="mr-2" />
+            Ir a Whatsapp
+          </button>
+        </a>
         <h3 className="font-bold text-sm">Descripción</h3>
         <p className="font-light">{product.descripcion}</p>
       </div>
