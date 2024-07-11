@@ -15,6 +15,19 @@ function getProduct(id) {
 const ProductPage = ({ params }) => {
   const product = getProduct(params.id);
 
+  // Estado para almacenar la URL de WhatsApp
+  const [whatsappLink, setWhatsappLink] = useState("");
+
+  // Efecto para generar dinámicamente el enlace de WhatsApp
+  useEffect(() => {
+    if (product) {
+      const productLink = window.location.href;
+      const message = encodeURIComponent(`Hola, estoy interesado en este producto: ${productLink}`);
+      const whatsappUrl = `https://wa.me/573228662072?text=${message}`;
+      setWhatsappLink(whatsappUrl);
+    }
+  }, [product]);
+
   // Verifica si el producto no se encontró
   if (!product) {
     return <div>Producto no encontrado</div>;
@@ -32,16 +45,6 @@ const ProductPage = ({ params }) => {
   const onClickThumb = (index, item) => {
     console.log(`Clicked thumb ${index}`, item);
   };
-
-  // Estado para almacenar la URL de WhatsApp
-  const [whatsappLink, setWhatsappLink] = useState("");
-
-  // Efecto para generar dinámicamente el enlace de WhatsApp
-  useEffect(() => {
-    const productLink = window.location.href;
-    const message = encodeURIComponent(`Hola, estoy interesado en este producto: ${productLink}`);
-    setWhatsappLink(`https://wa.me/573228662072?text=${message}`);
-  }, []);
 
   return (
     <div className="mt-5 mb-20 grid grid-cols-1 lg:grid-cols-3 gap-3">
@@ -90,3 +93,5 @@ const ProductPage = ({ params }) => {
 };
 
 export default ProductPage;
+
+
