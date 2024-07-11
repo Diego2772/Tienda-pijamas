@@ -70,7 +70,8 @@ const ProductPage = ({ params }) => {
         <p className="text-lg mb-5">${product.price}</p>
         <p>Tallas disponibles:</p>
         <p>S, M, L</p>
-        <button className="btn-primary my-5">Ir a Whatsapp</button>
+        <button className="btn-primary my-5" >
+          <a href="https://wa.me/573228662072">Ir a Whatsapp </a></button>
         <h3 className="font-bold text-sm">Descripción</h3>
         <p className="font-light">{product.descripcion}</p>
       </div>

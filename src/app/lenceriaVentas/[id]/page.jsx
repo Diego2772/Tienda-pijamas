@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import list from "../../../../public/lenceria";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -13,7 +13,6 @@ function getProduct(id) {
 
 // Componente de la página del producto
 const ProductPage = ({ params }) => {
-  // Obtén el producto usando la función getProduct
   const product = getProduct(params.id);
 
   // Verifica si el producto no se encontró
@@ -33,6 +32,16 @@ const ProductPage = ({ params }) => {
   const onClickThumb = (index, item) => {
     console.log(`Clicked thumb ${index}`, item);
   };
+
+  // Estado para almacenar la URL de WhatsApp
+  const [whatsappLink, setWhatsappLink] = useState("");
+
+  // Efecto para generar dinámicamente el enlace de WhatsApp
+  useEffect(() => {
+    const productLink = window.location.href;
+    const message = encodeURIComponent(`Hola, estoy interesado en este producto: ${productLink}`);
+    setWhatsappLink(`https://wa.me/573228662072?text=${message}`);
+  }, []);
 
   return (
     <div className="mt-5 mb-20 grid grid-cols-1 lg:grid-cols-3 gap-3">
@@ -65,12 +74,14 @@ const ProductPage = ({ params }) => {
         </Carousel>
       </div>
       {/* detalles */}
-      <div className="col-span-1 px-5 mt-8 md:mt-0 " >
+      <div className="col-span-1 px-5 mt-8 md:mt-0 ">
         <h1 className="antialiased font-bold text-xl">{product.title}</h1>
         <p className="text-lg mb-5">${product.price}</p>
         <p>Tallas disponibles:</p>
         <p>S, M, L</p>
-        <button className="btn-primary my-5">Ir a Whatsapp</button>
+        <button className="btn-primary my-5">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">Ir a Whatsapp</a>
+        </button>
         <h3 className="font-bold text-sm">Descripción</h3>
         <p className="font-light">{product.descripcion}</p>
       </div>
