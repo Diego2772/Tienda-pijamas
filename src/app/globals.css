@@ -225,3 +225,4 @@ product-name {
     object-fit: cover;
   }
   
+  @import "flowbite";

@@ -43,7 +43,7 @@ const ProductPage = ({ params }) => {
   };
 
   return (
-    <div className="mt-5 mb-20 grid grid-cols-1 lg:grid-cols-3 gap-3">
+    <div className="mt-5 mb-20 grid grid-cols-1 lg:grid-cols-3 gap-3 mb-[200px]">
       <div className="col-span-1 md:col-span-2 mx-auto md:mb-[100px] lg:ml-[280px]" style={{ width: '100%', height: '500px', maxWidth: '500px' }}>
         <Carousel 
           showArrows={true}
