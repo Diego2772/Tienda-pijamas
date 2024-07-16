@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import { FaBars } from "react-icons/fa";
 import Link from "next/link";
-
+import "../../globals.css"
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
@@ -41,17 +41,17 @@ function Navbar() {
           <div className="flex ml-60">
             <Link
               href="/pijamas"
-              className="text-base font-normal md:text-lg text-[#295662] ml-40"
+              className="text-3xl md:text-xl text-[#295662] ml-40 font-zilla-slab"
               prefetch={false}
             >
               Pijamas
             </Link>
             <Link
               href="/lenceria"
-              className="text-base font-normal md:text-lg text-[#295662] ml-40"
+              className="text-xl md:text-lg text-[#295662] ml-40 font-zilla-slab"
               prefetch={false}
             >
-              Lenceria
+              Lencería
             </Link>
           </div>
         </div>

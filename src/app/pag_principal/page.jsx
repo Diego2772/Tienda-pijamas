@@ -23,7 +23,7 @@ function Pag_principal() {
   return (
     <div className="items-center justify-center h-full mt-40">
       <div className="flex items-center justify-center w-screen">
-        <h1 className="text-center">PRODUCTOS NUEVOS</h1>
+      <h1 className="text-center font-zilla-slab text-4xl">PRODUCTOS DESTACADOS</h1>
       </div>
       <div className="flex justify-center">
         <div className="ventas grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-10 lg:ml-10 md:ml-0 lg:mt-20">
@@ -45,6 +45,7 @@ function Pag_principal() {
                       onMouseEnter={() => handleMediaChange(index, image)}
                       onMouseLeave={() => handleMouseLeave(index)}
                       alt=""
+                      loading="lazy"
                     />
                   ))}
                 </div>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Carrucel from './carrucel/carrucel'; 
+import Carrucel from './components/carrucel/carrucel'; 
 import Pag_principal from './pag_principal/page';
 const Page = () => {
   return (

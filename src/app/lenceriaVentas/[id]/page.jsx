@@ -21,7 +21,7 @@ const ProductPage = ({ params }) => {
     if (product) {
       const productLink = window.location.href;
       const message = encodeURIComponent(`Hola, estoy interesado en este producto: ${productLink}`);
-      const whatsappUrl = `https://wa.me/573228662072?text=${message}`;
+      const whatsappUrl = `https://wa.me/573213843108??text=${message}`;
       setWhatsappLink(whatsappUrl);
     }
   }, [product]);
@@ -59,16 +59,16 @@ const ProductPage = ({ params }) => {
           infiniteLoop={true}
         >
           <div>
-            <img src={product.productMedia.modelo2} alt="Lenceria 1" className="w-full h-30 md:h-full object-contain" />
+            <img src={product.productMedia.modelo2} alt="Lenceria 1" className="w-full h-30 md:h-full object-contain" loading="lazy" />
           </div>
           <div>
-            <img src={product.productMedia.modelo3} alt="Lenceria 2" className="w-full h-30 md:h-full object-contain" />
+            <img src={product.productMedia.modelo3} alt="Lenceria 2" className="w-full h-30 md:h-full object-contain" loading="lazy" />
           </div>
           <div>
-            <img src={product.productMedia.modelo2} alt="Lenceria 3" className="w-full h-30 md:h-full object-contain" />
+            <img src={product.productMedia.modelo2} alt="Lenceria 3" className="w-full h-30 md:h-full object-contain" loading="lazy" />
           </div>
           <div>
-            <img src={product.productMedia.modelo3} alt="Lenceria 4" className="w-full h-30 md:h-full object-contain" />
+            <img src={product.productMedia.modelo3} alt="Lenceria 4" className="w-full h-30 md:h-full object-contain" loading="lazy" />
           </div>
         </Carousel>
       </div>
