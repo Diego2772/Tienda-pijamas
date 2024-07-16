@@ -21,7 +21,7 @@ const ProductPage = ({ params }) => {
     if (product) {
       const productLink = window.location.href;
       const message = encodeURIComponent(`Hola, estoy interesado en este producto: ${productLink}`);
-      const whatsappUrl = `https://wa.me/573213843108??text=${message}`;
+      const whatsappUrl = `https://wa.me/573213843108?text=${message}`;
       setWhatsappLink(whatsappUrl);
     }
   }, [product]);
