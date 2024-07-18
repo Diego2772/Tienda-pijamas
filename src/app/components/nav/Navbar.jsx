@@ -58,43 +58,46 @@ function Navbar() {
 
         {/* Botón de menú para dispositivos móviles */}
         <div className="lg:hidden flex items-center mr-12" ref={menuRef}>
-          <button
-            type="button"
-            className="rounded-md bg-[#f5dcc6] text-[#295662] p-2 text-base font-normal transition-colors hover:bg-white-200 focus:outline-none focus:ring-2 focus:ring-[#295662] dark:bg-[#295662] dark:text-gray-50 dark:hover:bg-[#295662] dark:focus:ring-[#295662] h-8 w-8 flex items-center justify-center"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <FaBars className="w-6 h-6" />
-          </button>
+  <button
+    type="button"
+    className="rounded-md bg-[#f5dcc6] text-[#295662] p-2 text-base font-normal transition-colors hover:bg-white-200 focus:outline-none focus:ring-2 focus:ring-[#295662] dark:bg-[#295662] dark:text-gray-50 dark:hover:bg-[#295662] dark:focus:ring-[#295662] h-8 w-8 flex items-center justify-center"
+    onClick={() => setIsOpen(!isOpen)}
+  >
+    <FaBars className="w-6 h-6" />
+  </button>
 
-          {/* Contenido desplegable para dispositivos móviles */}
-          {isOpen && (
-            <div className="absolute top-20 left-0 right-0 z-50 bg-white shadow-lg dark:bg-gray-950">
-              <nav className="flex flex-col">
-                <Link
-                  href="/pijamas"
-                  className="flex items-center gap-2 px-4 py-3 text-base font-normal text-[#295662] hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
-                  prefetch={false}
-                >
-                  Pijamas
-                </Link>
-                <Link
-                  href="/lenceria"
-                  className="flex items-center gap-2 px-4 py-3 text-base font-normal text-[#295662] hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
-                  prefetch={false}
-                >
-                  Lenceria
-                </Link>
-              </nav>
-            </div>
-          )}
-          <Link href="/" className="ml-0">
-            <img
-              src="/images/LOGO.AGP.jpg"
-              alt="AGP Lady Lingerie Logo"
-              className="w-24 h-24 lg:w-32 lg:h-32 ml-10"
-            />
-          </Link>
-        </div>
+  {/* Contenido desplegable para dispositivos móviles */}
+  {isOpen && (
+    <div className="absolute top-20 left-0 right-0 z-50 bg-white shadow-lg dark:bg-gray-950">
+      <nav className="flex flex-col">
+        <Link
+          href="/pijamas"
+          className="flex items-center gap-2 px-4 py-3 text-base font-normal text-[#295662] hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
+          prefetch={false}
+          onClick={() => setIsOpen(false)}
+        >
+          Pijamas
+        </Link>
+        <Link
+          href="/lenceria"
+          className="flex items-center gap-2 px-4 py-3 text-base font-normal text-[#295662] hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800"
+          prefetch={false}
+          onClick={() => setIsOpen(false)}
+        >
+          Lenceria
+        </Link>
+      </nav>
+    </div>
+  )}
+  <Link href="/" className="ml-0">
+    <img
+      src="/images/LOGO.AGP.jpg"
+      alt="AGP Lady Lingerie Logo"
+      className="w-24 h-24 lg:w-32 lg:h-32 ml-10"
+    />
+  </Link>
+</div>
+
       </div>
     </header>
   );
