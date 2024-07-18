@@ -36,15 +36,15 @@ const Carrucel = () => {
         infiniteLoop={true}
       >
         <div>
-          <img src="/images/lenceria1.jpg" alt="Lenceria 1" />
+          <img src="/imagenes/BOTONES1.jpg" alt="Lenceria 1" />
           
         </div>
         <div>
-          <img src="/images/lenceria2.webp" alt="Lenceria 2" />
+          <img src="/imagenes/TIRAS1.jpg" alt="Lenceria 2" />
           
         </div>
         <div>
-          <img src="/images/lenceria3.jpg" alt="Lenceria 3" />
+          <img src="/imagenes/CROP2.jpg" alt="Lenceria 3" />
 
         </div>
       </Carousel>

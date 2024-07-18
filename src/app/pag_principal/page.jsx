@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import list from "../../../public/lenceria";
+import list from "../../../public/principal";
 
 function Pag_principal() {
   const [productMedia, setProductMedia] = useState({});

@@ -52,7 +52,7 @@ function App() {
                 <span>{item.tipo}</span>
                 <h4 className="product-name">{item.title}</h4>
                 <p className="category">{item.category}</p>
-                <p className="category">{item.cantidad}</p>
+                <p className="category leading-normal">{item.cantidad}</p>
                 <p className="price">{item.price}</p>
               </div>
             </div>

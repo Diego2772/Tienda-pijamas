@@ -59,10 +59,10 @@ const ProductPage = ({ params }) => {
           infiniteLoop={true}
         >
           <div>
-            <img src={product.productMedia.modelo2} alt="Lenceria 1" className="w-full h-30 md:h-full object-contain" loading="lazy" />
+            <img src={product.img} alt="Lenceria 1" className="w-full h-30 md:h-full object-contain" loading="lazy" />
           </div>
           <div>
-            <img src={product.productMedia.modelo3} alt="Lenceria 2" className="w-full h-30 md:h-full object-contain" loading="lazy" />
+            <img src={product.productMedia.modelo1} alt="Lenceria 2" className="w-full h-30 md:h-full object-contain" loading="lazy" />
           </div>
           <div>
             <img src={product.productMedia.modelo2} alt="Lenceria 3" className="w-full h-30 md:h-full object-contain" loading="lazy" />
@@ -86,6 +86,8 @@ const ProductPage = ({ params }) => {
         </a>
         <h3 className="font-bold text-sm">Descripción</h3>
         <p className="font-light">{product.descripcion}</p>
+        <br></br>
+        <p className="font-light">{product.descripcion2}</p>
       </div>
     </div>
   );
